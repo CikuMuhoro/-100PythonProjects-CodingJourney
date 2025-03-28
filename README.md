@@ -7,3 +7,5 @@ Developing 100 Python projects to enhance my skills, expand my problem-solving a
 1. A warm-up task where the user enters two numbers. If both numbers are even, the smallest number is returned as the answer. If both are odd, the largest number is returned. If either input is not a number, the user is prompted to enter a valid number.(EvenLessOddMore)
    
 2. A warm-up task to check if the user’s first and last name are properly capitalized. (ProperCapitalization)
+
+3. A warm-up task : Write a function that capitalizes the first and fourth letters of a name. (Capitalization)
