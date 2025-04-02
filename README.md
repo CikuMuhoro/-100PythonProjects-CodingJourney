@@ -14,4 +14,4 @@ Developing 100 Python projects to enhance my skills, expand my problem-solving a
 
 5. A warm-up task :Given a sentence, return a sentence with the words reversed (ReverseSentence)
 
-6.  warm-up task : Given an integer n, return True if n is within 10 of either 100 or 200
+6.  warm-up task : Given an integer n, return True if n is within 10 of either 100 or 200 (ChekingRange)
