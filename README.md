@@ -16,4 +16,4 @@ Developing 100 Python projects to enhance my skills, expand my problem-solving a
 
 6.  warm-up task : Given an integer n, return True if n is within 10 of either 100 or 200 (ChekingRange)
 
-7.  Simple Game : Guess a number : The computer randomly picks a number, and the player has to guess it.
+7.  Simple Game : Guess a number : The computer randomly picks a number, and the player has to guess it.(GuesstheNumber)
