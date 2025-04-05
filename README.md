@@ -18,4 +18,4 @@ Developing 100 Python projects to enhance my skills, expand my problem-solving a
 
 7.  Simple Game : Guess a number : The computer randomly picks a number, and the player has to guess it.(GuesstheNumber)
 
-8.  Simple Game : Rock Paper scissors 
+8.  Simple Game : Rock Paper scissors(RockPaperScissors)
