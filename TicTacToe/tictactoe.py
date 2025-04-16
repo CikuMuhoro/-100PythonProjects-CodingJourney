@@ -3,36 +3,37 @@ import random
 
 class TicTacToe:
 
-    @staticmethod
-    def tictactoe():
+    def show_board(self):
 
-        board_display = [
+        self.board_display = [
             [1, 2, 3],
             [4, 5, 6],
             [7, 8, 9]
         ]
-        for row in board_display:
+        self.player = None
+        self.computer = None
+
+        for row in self.board_display:
             print(" | ".join(str(cell) for cell in row))
 
-        player1 = "x"
-        player2 = "0"
-        player = input("Lets start the game, What do you want X or 0?")
-
+    def player_symbol(self):
+        player = input("Lets start the game, What do you want X or 0?").lower()
         if player == "x":
-            print("you are player one, Computer will be player two")
-            print("Make your move")
+            self.player = "x"
+            self.computer = "0"
+            print("computer will be player 0")
         elif player == "0":
-            print("you are player two, Computer will be player one")
-            print("computer will take move first")
+            self.player = "0"
+            self.computer = "x"
+            print("computer will be player X")
         else:
-            print("you have to choose btween X or 0")
+            print("invalid choise")
+            self.player = None
+            self.computer = None
 
-        if player1 == "x":
-            computer_choice = (random.randint(1, 9))
-            for row in board_display:
-                for i in range(len(row)):
-                    if row[i] == computer_choice:
-                        row[i] = "0"
+    # def positioning_moves(self):
 
 
-TicTacToe.tictactoe()
+game = TicTacToe()
+game.show_board()
+game.player_symbol()
