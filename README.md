@@ -20,4 +20,4 @@ Developing 100 Python projects to enhance my skills, expand my problem-solving a
 
 8.  Simple Game : Rock Paper scissors(RockPaperScissors)
 
-9.  simple Game : Tic Tac Toe
+9.  simple Game : Tic Tac Toe (TicTacToe)
