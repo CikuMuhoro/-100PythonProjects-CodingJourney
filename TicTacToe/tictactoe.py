@@ -73,6 +73,23 @@ class TicTacToe:
             print("Computer chose a move:")
             self.show_board()
 
+    def chek_winner(self, symbol):
+        # check row and columns for the winner
+        for i in range(3):
+            if all(self.board_display[i][j] == symbol for j in range(3)) or \
+               all(self.board_display[j][i] == symbol for j in range(3)):
+                return True
+
+            # Check both diagonals for the winner
+        if all(self.board_display[i][i] == symbol for i in range(3)) or \
+           all(self.board_display[i][2 - i] == symbol for i in range(3)):
+            return True
+
+        return False
+
+    def draw(self):
+        return all(not isinstance(cell, int) for row in self.board_display for cell in row)
+
 
 game = TicTacToe()
 game.show_board()
@@ -81,4 +98,17 @@ game.player_symbol()
 if game.player:
     while True:
         game.player_moves()
+        if game.chek_winner(game.player):
+            print("you win!")
+            break
+        if game.draw():
+            print("its a draw!")
+            break
+
         game.computer_moves()
+        if game.chek_winner(game.computer):
+            print("Computer wins!")
+            break
+        if game.draw():
+            print("its a draw!")
+            break
