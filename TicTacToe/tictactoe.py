@@ -73,7 +73,7 @@ class TicTacToe:
             print("Computer chose a move:")
             self.show_board()
 
-    def chek_winner(self, symbol):
+    def check_winner(self, symbol):
         # check row and columns for the winner
         for i in range(3):
             if all(self.board_display[i][j] == symbol for j in range(3)) or \
@@ -98,7 +98,7 @@ game.player_symbol()
 if game.player:
     while True:
         game.player_moves()
-        if game.chek_winner(game.player):
+        if game.check_winner(game.player):
             print("you win!")
             break
         if game.draw():
@@ -106,7 +106,7 @@ if game.player:
             break
 
         game.computer_moves()
-        if game.chek_winner(game.computer):
+        if game.check_winner(game.computer):
             print("Computer wins!")
             break
         if game.draw():
