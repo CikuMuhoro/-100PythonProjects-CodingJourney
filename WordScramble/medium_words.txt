@@ -1,8 +1,50 @@
-animal, better, bottle, camera, cousin, dinner,
-doctor, dragon, energy, engine, flower, forest,
-garage, garden, giraffe, hammer, hunter, insect,
-island, jungle, kettle, ladder, laptop, magnet,
-monkey, museum, needle, orange, parent, pencil, 
-pirate, planet, pocket, police, rabbit, remote, 
-rocket, school, shadow, silver, singer, soccer, 
-spider, stairs, summer, switch, ticket, turtle, uncle, window
+animal
+better
+bottle
+camera
+cousin
+dinner
+doctom
+dragon
+energy
+engine
+flower
+forest
+garage 
+garden 
+giraffe 
+hammer
+hunter
+insect
+island
+jungle
+kettle
+ladder
+laptop
+magnet
+monkey
+museum
+needle
+orange
+parent
+pencil
+pirate
+planet
+pocket
+police
+rabbit
+remote 
+rocket
+school
+shadow
+silver
+singer
+soccer 
+spider
+stairs
+summer 
+switch 
+ticket
+turtle
+uncle
+window
