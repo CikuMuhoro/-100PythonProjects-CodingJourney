@@ -1,0 +1,7 @@
+apple, ball, cat, dog, egg, fish, goat,
+hat, ice, jump, kite, lion, moon, nose,
+owl, pig, queen, rain, sun, toy, up, van,
+web, box, yes, zip, red, blue, green, yellow,
+star, milk, chair, table, phone, glass, bread,
+duck, frog, hand, leg, feet, book, bag, pen, cake,
+soup, rice, car, bus

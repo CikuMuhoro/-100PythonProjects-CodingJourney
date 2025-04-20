@@ -1,0 +1,10 @@
+abandon, acquire, awkward, bicycle, blizzard,
+chemistry, cryptic, dialogue, diploma, drought,
+eclipse, elastic, equation, explosion, fortune,
+friction, galaxy, genetic, grammar, gravity,
+hacker, horizon, hurricane, illusion, justice,
+kingdom, language, leisure, lightning, machine,
+mixture, mortgage, mystery, neutron, nightmare, 
+nucleus, obstacle, opinion, parallel, parasite, 
+pattern, physics, prison, puzzle, quartz, quantum, 
+revenge, science, tremble, volcano, warrior
