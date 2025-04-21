@@ -19,7 +19,7 @@ class WordScramble:
 
         with open("hard_words.txt", "r") as file:
             hard = [word.strip() for word in file]
-            for word in easy:
+            for word in hard:
                 print(word)
 
 

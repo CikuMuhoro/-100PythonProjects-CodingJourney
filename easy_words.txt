@@ -34,8 +34,8 @@ chair
 table
 phone
 glass
-bread,
-duck,
+bread
+duck
 frog
 hand
 leg
