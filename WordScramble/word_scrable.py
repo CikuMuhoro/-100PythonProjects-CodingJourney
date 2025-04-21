@@ -1,4 +1,5 @@
 import os
+import random
 
 
 class WordScramble:
@@ -40,8 +41,12 @@ class WordScramble:
             print("chose again among the three levels")
 
     def reading_words(self):
+        with open(self.level, "r") as file:
+            words = [word.strip() for word in file]
+            chosen_word = random.choice(words)
+            print(chosen_word)
 
 
 game = WordScramble()
-game.reading_words()
 game.chose_level()
+game.reading_words()
