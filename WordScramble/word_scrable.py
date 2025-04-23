@@ -6,7 +6,7 @@ class WordScramble:
 
     def __init__(self):
         pass
-
+    '''
     def easy_words(self):
 
         with open("easy_words.txt", "r") as file:
@@ -25,8 +25,9 @@ class WordScramble:
             hard = [word.strip() for word in file]
             for word in hard:
                 return
+    '''
 
-    def chose_level(self):
+    def choose_level(self):
         level = input(
             "What level do you prefer easy,medium or hard?").lower()
 
@@ -40,7 +41,7 @@ class WordScramble:
             self.level = "hard_words.txt"
             print("Hard level. You have up to five attemps for every word.")
         else:
-            print("chose again among the three levels")
+            print("Please choose one of the three levels.")
 
     def reading_words(self):
         # randomly pick a word from chosen list
@@ -48,7 +49,7 @@ class WordScramble:
             words = [word.strip() for word in file]
             self.chosen_word = random.choice(words)
 
-            # scramblering the chosen word
+            # scrambling the chosen word
             chosen_word_list = list(self.chosen_word)
             random.shuffle(chosen_word_list)
             return ("".join(chosen_word_list))
@@ -60,7 +61,7 @@ class WordScramble:
         attempt = 5
 
         while attempt > 0:
-            guess = input("your geuse:").strip().lower()
+            guess = input("your guess:").strip().lower()
 
             if guess == self.chosen_word.lower():
                 print("correct!")
@@ -80,7 +81,7 @@ class WordScramble:
 while True:
 
     game = WordScramble()
-    game.chose_level()
+    game.choose_level()
     game.reading_words()
     game.playing_game()
 
