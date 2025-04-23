@@ -91,24 +91,31 @@ class TicTacToe:
         return all(not isinstance(cell, int) for row in self.board_display for cell in row)
 
 
-game = TicTacToe()
-game.show_board()
-game.player_symbol()
+while True:
+    game = TicTacToe()
+    game.show_board()
+    game.player_symbol()
 
-if game.player:
-    while True:
-        game.player_moves()
-        if game.check_winner(game.player):
-            print("you win!")
-            break
-        if game.draw():
-            print("its a draw!")
-            break
+    if game.player:
+        while True:
+            game.player_moves()
+            if game.check_winner(game.player):
+                print("you win!")
+                break
+            if game.draw():
+                print("its a draw!")
+                break
 
-        game.computer_moves()
-        if game.check_winner(game.computer):
-            print("Computer wins!")
-            break
-        if game.draw():
-            print("its a draw!")
-            break
+            game.computer_moves()
+            if game.check_winner(game.computer):
+                print("Computer wins!")
+                break
+            if game.draw():
+                print("its a draw!")
+                break
+
+    play_again = input("Do you want to play again? (yes/no): ").strip().lower()
+
+    if play_again != "yes":
+        print("Thanks for playing!")
+        break
