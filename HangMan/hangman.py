@@ -1,43 +1,53 @@
 import random
 
-word_list = [
-    "apple", "banana", "orange", "guitar", "window", "pencil", "school", "python", "jungle", "laptop",
-    "ocean", "flower", "secret", "shadow", "turtle", "camera", "desert", "island", "planet", "rocket",
-    "bottle", "monkey", "button", "doctor", "market", "yellow", "garden", "coffee", "castle", "dragon",
-    "frozen", "wizard", "thunder", "mirror", "puzzle", "cookie", "winter", "summer", "forest", "bridge",
-    "helmet", "wallet", "circus", "cotton", "fabric", "tunnel", "credit", "stream", "dancer", "cloudy"
-]
 
-random_word = random.choice(word_list)
-print(random_word)
+class Hangman:
+    def hangman_words(self):
+        self.word_list = [
+            "apple", "banana", "orange", "guitar", "window", "pencil", "school", "python", "jungle", "laptop",
+            "ocean", "flower", "secret", "shadow", "turtle", "camera", "desert", "island", "planet", "rocket",
+            "bottle", "monkey", "button", "doctor", "market", "yellow", "garden", "coffee", "castle", "dragon",
+            "frozen", "wizard", "thunder", "mirror", "puzzle", "cookie", "winter", "summer", "forest", "bridge",
+            "helmet", "wallet", "circus", "cotton", "fabric", "tunnel", "credit", "stream", "dancer", "cloudy"
+        ]
 
-hangman_art = {
-    0: ("",
-        "",
-        ""),
+        self.random_word = random.choice(self.word_list)
+        # print(self.random_word)
 
-    1: ("O",
-        "",
-        ""),
+    def hangman_art(self):
+        self.hangman_art = {
+            0: ("",
+                "",
+                ""),
 
-    2: ("O",
-        "|",
-        ""),
+            1: ("O",
+                "",
+                ""),
 
-    3: ("O",
-        "/|",
-        ""),
+            2: ("O",
+                "|",
+                ""),
 
-    4: ("0",
-        "/|\\",
-        ""),
+            3: ("O",
+                "/|",
+                ""),
 
-    5: ("O",
-        "/|\\",
-        "/"),
+            4: ("0",
+                "/|\\",
+                ""),
 
-    6: ("O",
-        "/|\\",
-        "/\\"),
+            5: ("O",
+                "/|\\",
+                "/"),
 
-}
+            6: ("O",
+                "/|\\",
+                "/\\"),
+
+        }
+
+    def hangman_loop(sef):
+
+
+game = Hangman()
+game.hangman_words()
