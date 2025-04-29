@@ -14,7 +14,7 @@ class Hangman:
         self.random_word = random.choice(self.word_list)
         # print(self.random_word)
 
-    def hangman_art(self):
+    def hangman_art_image(self):
         self.hangman_art = {
             0: ("",
                 "",
@@ -46,8 +46,28 @@ class Hangman:
 
         }
 
-    def hangman_loop(sef):
+    def print_hangman(self):
+        print(self.hangman_art_image[self.lives])
+
+    def hangman_loop(self):
+        self.guess_word = [" _" for _ in self.random_word]
+
+        guess = input("Guess correctly to save Hangman:" +
+                      "".join(self.guess_word)).lower()
+
+        if guess in self.guess_word:
+            for i, letter in enumerate(self.guess_word):
+                if letter == guess:
+                    self.guess_word[i] = guess
+                    print("greatGuess!")
+
+                else:
+                    self.hangman_art -= 1
+                    print("ooh no!", self.lives)
+                    self.print_hangman()
+                print("Current word:", "  ".join(self.display_word))
 
 
 game = Hangman()
 game.hangman_words()
+game.hangman_loop()
