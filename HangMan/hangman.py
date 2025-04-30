@@ -12,6 +12,7 @@ class Hangman:
         ]
 
         self.random_word = random.choice(self.word_list)
+        self.lives = 6
         # print(self.random_word)
 
     def hangman_art_image(self):
@@ -62,7 +63,7 @@ class Hangman:
                     print("greatGuess!")
 
                 else:
-                    self.hangman_art -= 1
+                    self.lives -= 1
                     print("ooh no!", self.lives)
                     self.print_hangman()
                 print("Current word:", "  ".join(self.display_word))
@@ -70,4 +71,5 @@ class Hangman:
 
 game = Hangman()
 game.hangman_words()
+game.hangman_art_image()
 game.hangman_loop()
