@@ -13,6 +13,8 @@ class Hangman:
 
         self.random_word = random.choice(self.word_list)
         self.lives = 6
+        self.guess_word = ["_" for _ in self.random_word]
+        self.guessed_letters = set()
         # print(self.random_word)
 
     def hangman_art_image(self):
@@ -48,32 +50,61 @@ class Hangman:
         }
 
     def print_hangman(self):
-        head, body, legs = self.hangman_art[self.lives]
+        mistakes = 6 - self.lives  # number of incorrect guesses made
+        head, body, legs = self.hangman_art[mistakes]
         print(" ____")  # top of gallows
         print(" |  |")  # vertical support line
-        print(f" | {head}")  # haed line
+        print(f" | {head}")  # head line
         print(f" | {body}")  # body adn arms
         print(f" | {legs}")  # legs line
-        print("  |")  # base of stand
-        print("__|__")  # floor line
+        print(" |")  # base of stand
+        print("_|_")  # floor line
+
+    def display_game_state(self):
+        """ Print the current word and guessed letters. """
+        print("\nCurrent word:", " ".join(self.guess_word))
+        print(f"Guessed so far: {', '.join(sorted(self.guessed_letters))}")
 
     def hangman_loop(self):
-        self.guess_word = [" _" for _ in self.random_word]
+        self.display_game_state()
+        # self.guess_word = ["_" for _ in self.random_word]
+        # a
+        # self.guessed_letter = set()
 
-        guess = input("Guess correctly to save Hangman:" +
-                      "".join(self.guess_word)).lower()
+        while self.lives > 0 and "_" in self.guess_word:
+            # print("\nCurrent word:", " ".join(self.guess_word))
+            # print(f"Guessed so far:{', '.join(sorted(guessed_letter))}")
+            guess = input("Guess a letter: "). lower()
 
-        if guess in self.guess_word:
-            for i, letter in enumerate(self.guess_word):
-                if letter == guess:
-                    self.guess_word[i] = guess
-                    print("greatGuess!")
+         # guess = input("Guess correctly to save Hangman:" + "".join(self.guess_word)).lower()
 
-                else:
-                    self.lives -= 1
-                    print("ooh no!", self.lives)
-                    self.print_hangman()
-                print("Current word:", "  ".join(self.display_word))
+            if not guess.isalpha() or len(guess) != 1:
+                print("Please enter a single valid letter.")
+                continue
+
+            if guess in self.guessed_letters:
+                print("You already guessed that letter.")
+                continue
+
+            self.guessed_letters.add(guess)
+
+            if guess in self.random_word:
+                print("Great ageuse!")
+                for i, letter in enumerate(self.random_word):
+                    if letter == guess:
+                        self.guess_word[i] = guess
+
+            else:
+                self.lives -= 1
+                print("ooh no!", self.lives)
+                self.print_hangman()
+                # print("Current word:", "  ".join(self.guess_word))
+
+        # Game over condition
+        if "_" not in self.guess_word:
+            print(f"You saved hangman! The word was: {self.random_word}")
+        else:
+            print(f"Game over! The word was: {self.random_word}")
 
 
 game = Hangman()
