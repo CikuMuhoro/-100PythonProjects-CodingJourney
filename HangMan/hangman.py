@@ -48,7 +48,14 @@ class Hangman:
         }
 
     def print_hangman(self):
-        print(self.hangman_art_image[self.lives])
+        head, body, legs = self.hangman_art[self.lives]
+        print(" ____")  # top of gallows
+        print(" |  |")  # vertical support line
+        print(f" | {head}")  # haed line
+        print(f" | {body}")  # body adn arms
+        print(f" | {legs}")  # legs line
+        print("  |")  # base of stand
+        print("__|__")  # floor line
 
     def hangman_loop(self):
         self.guess_word = [" _" for _ in self.random_word]
