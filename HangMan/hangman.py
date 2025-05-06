@@ -41,7 +41,7 @@ class Hangman:
                 "/|",
                 ""),
 
-            4: ("0",
+            4: ("O",
                 "/|\\",
                 ""),
 
@@ -79,12 +79,11 @@ class Hangman:
 
         while self.lives > 0 and "_" in self.guess_word:
             clear_screen()
+            self.print_hangman()
             self.display_game_state()
-            # print("\nCurrent word:", " ".join(self.guess_word))
-            # print(f"Guessed so far:{', '.join(sorted(guessed_letter))}")
             guess = input("Guess a letter: "). lower()
 
-         # guess = input("Guess correctly to save Hangman:" + "".join(self.guess_word)).lower()
+        # guess = input("Guess correctly to save Hangman:" + "".join(self.guess_word)).lower()
 
             if not guess.isalpha() or len(guess) != 1:
                 print("Please enter a single valid letter.")
@@ -105,7 +104,7 @@ class Hangman:
             else:
                 self.lives -= 1
                 print("ooh no!", self.lives)
-                self.print_hangman()
+                # self.print_hangman()
                 # print("Current word:", "  ".join(self.guess_word))
 
         # Game over condition
@@ -115,7 +114,14 @@ class Hangman:
             print(f"Game over! The word was: {self.random_word}")
 
 
-game = Hangman()
-game.hangman_words()
-game.hangman_art_image()
-game.hangman_loop()
+while True:
+    game = Hangman()
+    game.hangman_words()
+    game.hangman_art_image()
+    game.hangman_loop()
+
+    play_again = input("Do you want to play again? (yes/no): ").strip().lower()
+
+    if play_again != "yes":
+        print("Thanks for playing!")
+        break
