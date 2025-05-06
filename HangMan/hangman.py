@@ -1,7 +1,13 @@
 import random
+import os
+
+
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 
 class Hangman:
+
     def hangman_words(self):
         self.word_list = [
             "apple", "banana", "orange", "guitar", "window", "pencil", "school", "python", "jungle", "laptop",
@@ -66,12 +72,14 @@ class Hangman:
         print(f"Guessed so far: {', '.join(sorted(self.guessed_letters))}")
 
     def hangman_loop(self):
-        self.display_game_state()
+
         # self.guess_word = ["_" for _ in self.random_word]
         # a
         # self.guessed_letter = set()
 
         while self.lives > 0 and "_" in self.guess_word:
+            clear_screen()
+            self.display_game_state()
             # print("\nCurrent word:", " ".join(self.guess_word))
             # print(f"Guessed so far:{', '.join(sorted(guessed_letter))}")
             guess = input("Guess a letter: "). lower()
@@ -89,7 +97,7 @@ class Hangman:
             self.guessed_letters.add(guess)
 
             if guess in self.random_word:
-                print("Great ageuse!")
+                print("Great guess!")
                 for i, letter in enumerate(self.random_word):
                     if letter == guess:
                         self.guess_word[i] = guess
