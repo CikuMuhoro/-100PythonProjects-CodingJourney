@@ -25,3 +25,5 @@ Developing 100 Python projects to enhance my skills, expand my problem-solving a
 10. Simple Game : Word Scramble (WordScramble)
 
 11.  Simple Game : Hangman (Hagman)
+
+12.  Scrape quotes, authors, and tags from http://quotes.toscrape.com
