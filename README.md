@@ -26,4 +26,22 @@ Developing 100 Python projects to enhance my skills, expand my problem-solving a
 
 11.  Simple Game : Hangman (Hagman)
 
-12.  Scrape quotes, authors, and tags from http://quotes.toscrape.com
+12.  Scrape a single quote, author, and tags from http://quotes.toscrape.com(Quote)
+
+13.  Scrape a first page quotes, authors, and tags from http://quotes.toscrape.com(Quotes)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
