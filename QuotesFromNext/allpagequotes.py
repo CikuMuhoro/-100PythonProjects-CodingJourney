@@ -19,7 +19,7 @@ def all_page_quotes():
             for quote_block in soup.find_all("div", class_="quote"):
                 quote_text = quote_block.find("span", class_="text").text
                 author = quote_block.find("small", class_="author").text
-                tags = tags = [
+                tags = [
                     tag.text for tag in quote_block.find_all("a", class_="tag")]
 
                 quote_data = {
