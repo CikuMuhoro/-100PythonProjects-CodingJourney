@@ -26,13 +26,18 @@ class Scraping_Book_listing:
                         rating_class) > 1 else "unknown"
 
                     books_data = {
-                        "Title ": title,
-                        "Price ": price,
-                        "Rating ": rating
+                        "Title": title,
+                        "Price": price,
+                        "Rating": rating
                     }
 
                     books_details.append(books_data)
-                print(books_details)
+                for book in books_details:
+                    print(f"Title: {book['Title']}")
+                    print(f"Price: {book['Price']}")
+                    print(f"Rating: {book['Rating']}")
+                    print("-" * 30)
+                break
 
         else:
             print("failed to retrieve the page")
