@@ -30,6 +30,10 @@ Developing 100 Python projects to enhance my skills, expand my problem-solving a
 
 13.  Scrape a first page quotes, authors, and tags from http://quotes.toscrape.com(Quotes)
 
+14.  Scrape all pages quotes, authors, and tags(paginating) from http://quotes.toscrape.com(Quotes)
+
+15.  scraping book store for books name, author and rating (paginating) and saving in a csv file
+
 
 
 
