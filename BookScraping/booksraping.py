@@ -3,16 +3,13 @@ from bs4 import BeautifulSoup
 
 
 class Scraping_Book_listing:
-    def __init__(self, titles=None, prices=None, rating=None):
-        self.titles = titles
-        self.prices = prices
-        self.rating = rating
+    def __init__(self, ):
+        self.books_details = []
 
     def book_scraping(self):
-        url = "https://books.toscrape.com/"
-        books_details = []
+        for page in range(1, 6):
+            url = f"https://books.toscrape.com/catalogue/page-{page}.html"
 
-        while url:
             response = requests.get(url)
             if response.status_code == 200:
                 soup = BeautifulSoup(response.text, "html.parser")
@@ -31,17 +28,17 @@ class Scraping_Book_listing:
                         "Rating": rating
                     }
 
-                    books_details.append(books_data)
-                for book in books_details:
-                    print(f"Title: {book['Title']}")
-                    print(f"Price: {book['Price']}")
-                    print(f"Rating: {book['Rating']}")
-                    print("-" * 30)
-                break
+                    self.books_details.append(books_data)
 
-        else:
-            print("failed to retrieve the page")
+            else:
+                print("failed to retrieve the page")
+
+        for book in self.books_details:
+            print(f"Title: {book['Title']}")
+            print(f"Price: {book['Price']}")
+            print(f"Rating: {book['Rating']}")
+            print("-" * 30)
 
 
-book = Scraping_Book_listing(None, None, None)
+book = Scraping_Book_listing()
 book.book_scraping()
