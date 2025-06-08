@@ -34,6 +34,8 @@ Developing 100 Python projects to enhance my skills, expand my problem-solving a
 
 15.  scraping book store for books name, author and rating (paginating) and saving in a csv file(BookScraping)
 
+16.  Basic salenium manually downloading webdriver (Saleniumasics)
+
 
 
 
